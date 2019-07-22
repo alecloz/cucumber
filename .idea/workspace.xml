@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="845caa02-0bc6-416b-867b-5a8f92d7dbb2" name="Default Changelist" comment="" />
+    <list default="true" id="845caa02-0bc6-416b-867b-5a8f92d7dbb2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -118,6 +120,9 @@
       <find>aspect</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -179,6 +184,7 @@
     <option name="width" value="978" />
     <option name="height" value="1048" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -262,14 +268,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="testBDD" type="b2602c69:ProjectViewProjectNode" />
-              <item name="testBDD" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sberbank" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="testBDD" type="b2602c69:ProjectViewProjectNode" />
@@ -386,8 +384,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1563650370366</updated>
-      <workItem from="1563650371661" duration="46370000" />
+      <workItem from="1563650371661" duration="47261000" />
     </task>
+    <task id="LOCAL-00001" summary="cucumber 1">
+      <created>1563796165400</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1563796165400</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -423,10 +429,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46370000" />
+    <option name="totallyTimeSpent" value="47261000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
@@ -496,6 +503,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="cucumber 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="cucumber 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
