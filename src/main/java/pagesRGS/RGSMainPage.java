@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class RGSMainPage extends BasePage {
+    public final static String RGS_URL = "https://rgs.ru";
 
     @FindBy(xpath = "//li[contains(@class, 'dropdown')]/a[contains(text(), 'Страхование')]")
     public WebElement dropDownButton;

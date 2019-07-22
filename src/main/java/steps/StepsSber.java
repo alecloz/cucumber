@@ -1,14 +1,16 @@
 package steps;
 
+
 import cucumber.api.java.ru.Когда;
 import cucumber.api.java.ru.Тогда;
 import init.Init;
+import org.junit.After;
+import org.junit.Before;
 import pagesSberbank.SberbankInsurancePage;
 import pagesSberbank.SberbankMainPage;
 import pagesSberbank.SberbankTravelInsurancePage;
-import java.util.Map;
 
-public class Steps {
+public class StepsSber {
     SberbankMainPage sberbankMainPage = new SberbankMainPage();
     SberbankInsurancePage sberbankInsurancePage;
     SberbankTravelInsurancePage sberbankTravelInsurancePage;
@@ -32,13 +34,13 @@ public class Steps {
         sberbankTravelInsurancePage = sberbankMainPage.openTravelInsurance();
     }
 
-    @Когда("присутствует заголовок {string}")
-    public void присутствует_заголовок(String string) {
+    @Когда("присутствует заголовок Страхование путешественников")
+    public void присутствует_заголовок_Страхование_путешественников() {
         sberbankTravelInsurancePage.textDisplayedCheck(sberbankTravelInsurancePage.headlineInsuranceAndTravel);
     }
 
-    @Тогда("нажимаем кнопку {string}")
-    public void нажимаем_кнопку(String string) {
+    @Тогда("нажимаем кнопку Оформить онлайн")
+    public void нажимаем_кнопку_Оформить_онлайн() {
         sberbankTravelInsurancePage.makeRequest();
     }
 
@@ -51,11 +53,15 @@ public class Steps {
     @Когда("выбрана минимальная сумма страхования")
     public void выбрана_минимальная_сумма_страхования() {
         sberbankInsurancePage.findAndClickMinimumBtn();
+    }
+
+    @Тогда("нажимаем кнопку Оформить")
+    public void нажимаем_кнопку_Оформить() {
         sberbankInsurancePage.findAndClickRegistrationBtn();
     }
 
-    @Когда("заполняются поля:")
-    public void заполняются_поля(io.cucumber.datatable.DataTable dataTable) {
+    @Когда("заполняются все поля:")
+    public void заполняются_все_поля(io.cucumber.datatable.DataTable dataTable) {
         sberbankInsurancePage.fillingForm(sberbankInsurancePage.insuredSurname, "PETROV");
         sberbankInsurancePage.fillingForm(sberbankInsurancePage.insuredName, "PETR");
         sberbankInsurancePage.fillingForm(sberbankInsurancePage.insuredBirthDate, "01.01.2000");
@@ -73,12 +79,10 @@ public class Steps {
         sberbankInsurancePage.fillingForm(sberbankInsurancePage.issueDate, "02.02.2015");
         sberbankInsurancePage.buttonClick(sberbankInsurancePage.issueDateTable);
         sberbankInsurancePage.fillingForm(sberbankInsurancePage.issuePlace, "УФМС по Московской области");
-        /*Map<String, String> dataMap = dataTable.asMap(String.class, String.class);
-        dataMap.forEach((key, value) -> System.out.println(String.format("Ключ: %s, Значение: %s;", key, value)));*/
     }
 
-    @Тогда("значения полей равны:")
-    public void значения_полей_равны(io.cucumber.datatable.DataTable dataTable) {
+    @Тогда("значения всех полей равны:")
+    public void значения_всех_полей_равны(io.cucumber.datatable.DataTable dataTable) {
         sberbankInsurancePage.checkAssert(sberbankInsurancePage.insuredSurname, "PETROV");
         sberbankInsurancePage.checkAssert(sberbankInsurancePage.insuredName, "PETR");
         sberbankInsurancePage.checkAssert(sberbankInsurancePage.insuredBirthDate, "01.01.2000");
@@ -91,12 +95,10 @@ public class Steps {
         sberbankInsurancePage.checkAssert(sberbankInsurancePage.passportNumber, "826401");
         sberbankInsurancePage.checkAssert(sberbankInsurancePage.issueDate, "02.02.2015");
         sberbankInsurancePage.checkAssert(sberbankInsurancePage.issuePlace, "УФМС по Московской области");
-        /*Map<String, String> dataMap = dataTable.asMap(String.class, String.class);
-        dataMap.forEach((key, value) -> System.out.println(String.format("Ключ: %s, Значение: %s;", key, value)));*/
     }
 
-    @Тогда("присутствует сообщение об ошибке")
-    public void присутствует_сообщение_об_ошибке() {
+    @Тогда("присутствует сообщение об ошибке заполнения формы")
+    public void присутствует_сообщение_об_ошибке_заполнения_формы() {
         sberbankInsurancePage.buttonClick(sberbankInsurancePage.continueButton);
         sberbankInsurancePage.textDisplayedCheck(sberbankInsurancePage.errorMessage);
     }

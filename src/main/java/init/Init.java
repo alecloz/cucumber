@@ -15,5 +15,4 @@ public class Init {
     public static WebDriver getDriver() {
         return driver;
     }
-
 }
